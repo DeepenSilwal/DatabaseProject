@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "nydatavisualization",
+    "database-deploy": "nydatavisualization"
+  }
+}

@@ -25,7 +25,7 @@ function Crimes() {
   return (
     <div>
       <AreaChart
-        width={1000}
+        width={850}
         height={400}
         data={data}
         

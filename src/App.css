@@ -1,12 +1,7 @@
-
-#crimes-jumbo{
-  margin: 6em;
+#Row{
+  margin: 1em;
 }
 
-#crimes-chart{
-  padding: 10em;
-}
-
-#crimes-title{
-  color: blue;
+#chart{
+  width: 5em;
 }

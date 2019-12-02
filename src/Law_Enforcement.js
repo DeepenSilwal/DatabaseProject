@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Law from './updated_law_enforcement.json';
 import {
-  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+  Bar, BarChart, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 } from 'recharts';
 import {
   AreaChart, Area
@@ -25,10 +25,13 @@ console.log(data);
 function Law_Enforcement() {
   return (
     <div>
-      <AreaChart
-        width={1000}
+      <BarChart
+        width={850}
         height={400}
         data={data}
+        margin={{
+            top: 20, right: 30, left: 20, bottom: 5,
+          }}
         
       >
         <CartesianGrid strokeDasharray="3 3" />
@@ -36,16 +39,17 @@ function Law_Enforcement() {
         <YAxis />
         <Tooltip />
         <Legend />
-        <Area type="monotone" dataKey="Sworn_Full_Time" stroke="#8884d8"  />
-        <Area type="monotone" dataKey="Sworn_Part_Time" stroke="#82ca9d" />
-        <Area type="monotone" dataKey="Sworn_Total" stroke="#f2ea13" />
-        <Area type="monotone" dataKey="Civilian_Full_Time" stroke="#010215" />
-        <Area type="monotone" dataKey="Civilian_Part_Time" stroke="#82ca9d" />
-        <Area type="monotone" dataKey="Civilian_Total" stroke="#ed130b" />
-        <Area type="monotone" dataKey="FullTime_Total" stroke="#42daf9" />
-        <Area type="monotone" dataKey="PartTime_Total" stroke="#91f942" />
-      </AreaChart>
+        <Bar  dataKey="Sworn_Full_Time" stackId="a" fill="#8884d8"  />
+        <Bar  dataKey="Sworn_Part_Time" stackId="a" fill="#82ca9d" />
+        <Bar  dataKey="Sworn_Total" stackId="a" fill="#f2ea13" />
+        <Bar  dataKey="Civilian_Full_Time"stackId="a" fill="#010215" />
+        <Bar  dataKey="Civilian_Part_Time" stackId="a"fill="#82ca9d" />
+        <Bar  dataKey="Civilian_Total" stackId="a" fill ="#ed130b" />
+        <Bar  dataKey="FullTime_Total"stackId="a" fill="#42daf9" />
+        <Bar  dataKey="PartTime_Total"stackId="a" fill="#91f942" />
+      </BarChart>
     </div>
+    
   );
 }
 
